@@ -1,5 +1,5 @@
 const express = require('express');
-const jwt = require('../verivyToken/jwt')
+const jwt = require('../verifyToken/jwt')
 const router = express.Router();
 const  Log = require('../models/log')
 const mongoose = require('../connection/Connection');
