@@ -1,5 +1,8 @@
 # AppWebGestionBasica
-
+## Desarrollado por 
+Andres Felipe Gonzalez Bonilla
+## Correo 
+afelipgb@gmail.com
 # Server
 El servidor esta realizado en nodejs, con expres y mongosse.
 
