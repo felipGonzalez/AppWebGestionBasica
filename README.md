@@ -21,7 +21,7 @@ Las puntos de entrada son
 `http://localhost:3001/log`.
 `http://localhost:3001/role`.
 
-##Archivos adicionales
+## Archivos adicionales
 * Se adjunta Test  de prubas en Postman, Para realizarlas con facilidad recomiendo suprimir el metodo verifyToken  en Server/verifyToken/jwt/ 
 
 # NgApp

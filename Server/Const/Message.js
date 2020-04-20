@@ -1,12 +1,12 @@
 const MessageError = {
     duplicate: "!Upss, ese rol ya esta registrado, intenta con otro nombre",
     dataInvalid: "Hay un problema con los datos ingresados",
-    dataAdmin: "Los valores del admin estan por de",
+    dataAdmin: "Los valores del admin están por defecto",
     invalidEmail: "Tu usuario no esta registrado",
     invalidPassword: "Ups! Contraseña Incorrecta",
     userStatus: "Tu usuario esta desactivado. Contacta con tu administrador para mayor información",
     notDataRole: "No existen Roles registrados, Por favor agregue un rol en la opcion de Roles -> Nuevo",
-    notDeleteUser: "No se puede eliminar el usuario debido a que esta asociado con otros registros"
+    notDeleteUser: "No se puede eliminar el usuario debido a que este asociado con otros registros"
 }
 
 const Actions = {
@@ -19,6 +19,7 @@ const Actions = {
     updateRole:"editar rol",
     deleteRole:"eliminar rol"    
 }
+
 
 
 module.exports = {MessageError, Actions};
