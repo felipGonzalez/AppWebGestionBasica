@@ -1,0 +1,37 @@
+<nav class="navbar navbar-light">
+  <h1>Roles ({{listRoles.length}})</h1>
+  <form class="form-inline">
+    <button class="btn btn-outline-success my-2 my-sm-0" 
+    [disabled]="!checkRol()" 
+    (click)="createNewRole()"type="button">Nuevo</button>
+  </form>
+</nav>
+
+<div class="text-center" *ngIf="!flagList">
+  <div class="spinner-border" role="status">
+    <span class="sr-only">Cargando...</span>
+  </div>
+</div>
+
+<div class="alert alert-danger" role="alert" *ngIf="flagList && listRoles.length === 0">
+  No hay roles registrados, crea uno o contacta con tu administrador
+</div>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Rol</th>
+        <th scope="col">Nivel</th>
+        <th scope="col">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of listRoles;let index=index;" (click) = "viewRole(data)"  class="trData">
+        <td>{{index+1}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.level}}</td>
+        <td>#</td>
+     </tr>
+    </tbody>
+  </table>

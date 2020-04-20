@@ -1,0 +1,45 @@
+<form>
+    <nav class="navbar navbar-light">
+      <h3>Roles</h3>
+      <form class="form-inline">
+        <button class="btn btn-outline-danger my-2 my-sm-0" (click)="closeDialog(false)"type="button">X</button>
+      </form>
+    </nav>
+  
+    <div *ngIf="flagError" class="alert alert-danger" role="alert">
+        {{errorMessage}}
+    </div>
+
+        <div class="row">
+            <div class="col-9">
+                <div class="row">
+                    <div class="col-12">
+                        <label for="email">Rol</label>
+                        <input [disabled]="!checkRol() ||rol.name==='Admin' " [(ngModel)]="rol.name" name='rol' type="text" 
+                        class="form-control" aria-describedby="emailHelp" placeholder="Ingrese el Rol" required>
+                    </div>
+                    <div class="col-12">
+                        <label for="password">Nivel</label>
+                        <input [disabled]="!checkRol()" type="number" [(ngModel)]="rol.level" 
+                        name='level' class="form-control" placeholder="Nivel" required> 
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="row">
+                    <div class="col-12" *ngIf="checkRol()">
+                        <button type="submit" (click) ="saveRol()"class="btn btn-success mtBtn">Guardar</button>
+                    </div>
+                    <div class="col-12" *ngIf="!flagNewRol && checkRol()">
+                         <button type="button" (click)="deleteRol()" class="btn btn-danger mtBtn">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+</form>
+  
+  
+

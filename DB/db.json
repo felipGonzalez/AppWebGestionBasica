@@ -1,0 +1,84 @@
+{
+
+    "Roles": [ 
+        {
+            "name" : "Admin",
+            "level" :  99
+        },
+        {
+            "name" : "Consulta",
+            "level" :  10
+        }
+
+    ],
+    "Users": [
+        {
+            "username": "a@123.com",
+            "password": "a",
+            "rol": {
+                "name" : "Admin",
+                "level" :  99
+            },
+           "status": true
+        },
+        {
+            "username": "b@123.com",
+            "password": "b",
+            "rol": {
+                "name" : "Consulta",
+                "level" :  10
+            },
+           "status": true
+        },
+        {
+            "username": "c@123.com",
+            "password": "c",
+            "rol": {
+                "name" : "Consulta",
+                "level" :  10
+            },
+           "status": true
+        },
+        {
+            "username": "d@123.com",
+            "password": "d",
+            "rol": {
+                "name" : "Consulta",
+                "level" :  10
+            },
+           "status": false
+        }
+    ],
+    "Logs": [
+        {
+            "datetime": "2020-04-17T19:30:00.000Z",
+            "user": "a@123.com", 
+            "action":"crear usuario"
+        },
+        {
+            "datetime": "2020-04-16T19:30:00.000Z",
+            "user": "b@123.com", 
+            "action":"editar usuario"
+        },
+        {
+            "datetime": "2020-04-15T19:30:00.000Z",
+            "user": "c@123.com", 
+            "action":"crear rol"
+        },
+        {
+            "datetime": "2020-04-17T20:30:00.000Z",
+            "user": "a@123.com", 
+            "action":"Inicio sesion"
+        },
+        {
+            "datetime": "2020-04-16T20:30:00.000Z",
+            "user": "b@123.com", 
+            "action":"Inicio sesion"
+        },
+        {
+            "datetime": "2020-04-15T20:30:00.000Z",
+            "user": "c@123.com", 
+            "action":"Inicio sesion"
+        }
+    ]
+}

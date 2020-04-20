@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-xl-6 col-md-12">
+        <h2>Últimos accesos</h2>   
+
+        <table class="table ">
+            <thead class="thead-dark">
+              <tr>
+                <th><h2>Usuario</h2></th>
+                <th><h2>Fecha / hora</h2></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of logsHistoryList">
+                <td>{{data.user}}</td>
+                <td>{{data.datetime | date :'short'}}</td>
+            </tr>
+           </tbody>
+          </table>
+
+    </div>
+    <div class="col-xl-6 col-md-12">
+        <h2>Últimas acciones</h2>
+
+        <table class="table ">
+            <thead class="thead-dark">
+              <tr>
+                <th><h2>Usuario</h2></th>
+                <th><h2>Acción</h2></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of logsActionsList">
+                <td>{{data.user}}</td>
+                <td>{{data.action}}</td>
+            </tr>
+           </tbody>
+          </table>
+    </div>
+</div>

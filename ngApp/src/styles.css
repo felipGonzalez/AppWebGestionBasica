@@ -1,0 +1,39 @@
+* {
+    font-family: 'Roboto Slab', serif;
+}
+img {
+    width: 100px;
+    height: 100px;
+}
+
+a {
+    font-size: 25px;
+}
+
+.cont {
+    width: 90%;
+    margin: auto;
+    
+}
+
+.trData:hover {
+    cursor: pointer;
+    background-color: rgb(233, 236, 239)
+}
+
+
+@media (max-width: 992px) { 
+   
+    img {
+        width: 64px;
+        height: 64px;
+    }
+    a {
+        font-size: 15   px;
+    }
+}
+
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

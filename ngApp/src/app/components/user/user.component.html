@@ -1,0 +1,38 @@
+<nav class="navbar navbar-light">
+    <h1>Usuarios ({{listUsers.length}})</h1>
+    <form class="form-inline">
+      <button class="btn btn-outline-success my-2 my-sm-0" 
+      [disabled]="!checkRol()" 
+      (click)="createNewUser()"type="button">Nuevo</button>
+    </form>
+  </nav>
+
+  <div class="text-center" *ngIf="!flagList">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Cargando...</span>
+    </div>
+  </div>
+
+  <div class="alert alert-danger" role="alert" *ngIf="flagList && listUsers.length === 0">
+    No hay Usuarios con un nivel inferior al tuyo para mostrar.
+  </div>
+
+<table class="table" *ngIf="listUsers.length !== 0">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Correo / Usuario</th>
+        <th scope="col">Rol</th>
+        <th scope="col">Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of listUsers;let index=index;" (click) = "viewUser(data)"  class="trData">
+            <td>{{index+1}}</td>
+            <td>{{data.username}}</td>
+            <td>{{data.rol.name}}</td>
+            <td>{{checkStatus(data)}}</td>
+            
+        </tr>
+    </tbody>
+  </table>

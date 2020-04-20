@@ -1,0 +1,13 @@
+
+<div class="row">
+    <div class="col-xl-1 col-md-12">
+      <button type="button" class="btn btn-outline-dark myBtn" (click) = "changeFlag(true)">Usuarios</button>
+      <button type="button" class="btn btn-outline-dark myBtn" (click) = "changeFlag(false)">Roles</button>
+
+   </div>
+    <div class="col-xl-11 col-md-12 pl-5 pr-5">
+      <app-user *ngIf="flag"></app-user>  
+      <app-role *ngIf="!flag"></app-role>       
+    </div>
+</div>
+
